@@ -1,0 +1,32 @@
+.main_auth_contener{
+
+     background-color: black;
+     width: 50%;
+     height: 100vh;
+     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    
+}
+.Allconten{   
+display: flex;
+}
+.goldeDecor{
+position: absolute;
+top: -80px;
+left: -80px;
+width:300px;
+height: 300px;
+background-color: #fff;;
+border-radius: 50%;
+display: flex;
+align-items: flex-end;
+justify-content: center;
+}
+.goldeDecor img{
+     height: 200px;
+     width: 200px;
+}

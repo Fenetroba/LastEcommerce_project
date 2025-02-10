@@ -1,0 +1,50 @@
+.login_top{
+
+/* top: 50%; */
+left: 50%;
+transform:translate(50%,50%);
+
+}
+.login_contener{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+    
+}
+.login_contener,.login_form{
+     display: flex;
+     gap: 10px;
+     justify-content: space-around;
+     flex-direction: column;
+}
+.login_form{
+     background-color: var(--signForm);
+     padding: 30px 30px;
+     border-radius: 10px;
+}
+.login_form input{
+     padding: 6px;
+     border: none;
+     outline: none;
+}
+.login_form button{
+     padding: 6px;
+     border: none;
+     outline: none;
+     background: var(--therd_color);
+     cursor: pointer;
+}
+.directLogiOrSign{
+     color: green;
+     font-size: 18px;
+     margin: 10px;
+     padding: 6px;
+}
+.directLogiOrSign a{
+     display: flex;
+     align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: bold;
+}
