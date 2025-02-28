@@ -29,3 +29,9 @@ transform:translate(50%,40%);
      cursor: pointer;
 
 }
+.Loedbtn{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 35px;
+}

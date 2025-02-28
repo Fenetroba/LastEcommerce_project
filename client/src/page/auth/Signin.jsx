@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./Css/signup.css";
+import Loder from '../../component/loder/Loder.jsx'
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signupUser } from "../../app/Store/UserAuth.js";
 import toast from "react-hot-toast";
 const Signup = () => {
+  const { user, isAuthenticated ,loading } = useSelector((state) => state.Auth);
   const navigate = useNavigate();
   const [form, setForm] = useState({
     UserName: "",
@@ -24,6 +26,7 @@ const Signup = () => {
       }
     });
   };
+  console.log(loading)
   return (
     <div className="signup__top">
       <div className="signup_contener">
@@ -57,11 +60,11 @@ const Signup = () => {
             onChange={(e) => setForm({ ...form, password: e.target.value })}
           />
 
-          <button>Sign Up</button>
+          <button className="Loedbtn">{loading?<Loder/> :"Sign Up"}</button>
         </form>
 
         <div className="directLogiOrSign">
-          Alredy Have an Account ? <Link to="/auth/login">Login Here</Link>
+          {loading?"": <span>Alredy Have an Account ?<Link to="/auth/login">Login Here</Link></span>}
         </div>
       </div>
     </div>

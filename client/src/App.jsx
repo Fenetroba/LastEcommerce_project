@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import AuthLayer from "./page/AuthLayer";
 import Login from "./page/Auth/Login";
@@ -18,15 +18,15 @@ import CheckAuth from "./component/Authnticatin_checker/CheckAuth";
 import { Toaster } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import {CheckAuths} from './app/Store/UserAuth.js'
+import {CheckAuths} from './app/Store/UserAuth'
 function App() {
-  const { user, isAuthenticated } = useSelector((state) => state.Auth);
+  const { user, isAuthenticated ,loading } = useSelector((state) => state.Auth);
   const Dispatch=useDispatch();
-
+ const Location= useLocation()
   useEffect(()=>{
     Dispatch(CheckAuths())
   },[Dispatch])
-
+  console.log(loading, user, isAuthenticated, Location.pathname);
   return (
     <div>
       <Routes>
@@ -35,7 +35,7 @@ function App() {
           element={
             <CheckAuth isAuth={isAuthenticated} user={user}>
               <AuthLayer />
-  {console.log(isAuthenticated, user)};
+ 
   
             </CheckAuth>
           }
