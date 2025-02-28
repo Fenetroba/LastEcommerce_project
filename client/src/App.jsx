@@ -20,13 +20,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import {CheckAuths} from './app/Store/UserAuth'
 function App() {
-  const { user, isAuthenticated ,loading } = useSelector((state) => state.Auth);
-  const Dispatch=useDispatch();
- const Location= useLocation()
-  useEffect(()=>{
-    Dispatch(CheckAuths())
-  },[Dispatch])
-  console.log(loading, user, isAuthenticated, Location.pathname);
+  const { user, isAuthenticated, loading } = useSelector((state) => state.Auth);
+  const dispatch = useDispatch();
+  const location = useLocation();
+
+  useEffect(() => {
+    dispatch(CheckAuths());
+  }, [dispatch]);
+
+  console.log(loading, user, isAuthenticated, location.pathname);
+
+  if (loading) {
+    return <div>Loading...</div>; // Show a loading indicator while checking auth
+  }
+
   return (
     <div>
       <Routes>
@@ -35,8 +42,6 @@ function App() {
           element={
             <CheckAuth isAuth={isAuthenticated} user={user}>
               <AuthLayer />
- 
-  
             </CheckAuth>
           }
         >
@@ -71,6 +76,7 @@ function App() {
           <Route path="orders" element={<Order />} />
           <Route path="products" element={<Product />} />
         </Route>
+
         <Route path="*" element={<Nofound />} />
       </Routes>
 
