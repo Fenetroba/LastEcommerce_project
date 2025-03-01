@@ -30,12 +30,12 @@ function App() {
 
   console.log(loading, user, isAuthenticated, location.pathname);
 
-  if (loading) {
+  if (!location.pathname.startsWith("/auth") && loading) {
     return <div>Loading...</div>; // Show a loading indicator while checking auth
   }
 
   return (
-    <div>
+    <div className="App">
       <Routes>
         <Route
           path="/auth"

@@ -1,0 +1,10 @@
+.adminDashbord_contener{
+background-color: var(--darkgreentra);
+     width: 86%;
+     height: 95%;
+     position: absolute;
+     top: 10%;
+     left: 200px;
+     z-index: 5;
+
+}

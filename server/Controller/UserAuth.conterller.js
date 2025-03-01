@@ -70,7 +70,7 @@ export const Login = async (req, res) => {
         email: user.email,
       },
       process.env.JWT_SECRET,
-      { expiresIn: "15m" } // Corrected key
+      { expiresIn: "60m" } // Corrected key
     );
 
     res.cookie("token", token, { httpOnly: true, secure: false });

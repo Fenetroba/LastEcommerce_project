@@ -3,13 +3,19 @@ import { Outlet } from 'react-router-dom'
 import Header from '../component/Admin_view/Header'
 import Sider from '../component/Admin_view/Sider'
 import Layer from '../component/Admin_view/Layer'
+import '../page/PageCss/adminlayer.css'
 
 const AdminLayer = () => {
   return (
-    <div>
+    <div className='top' >
+    
+
       <Header/>
-      <Sider/>
+     
+      <div className='adminLayer'>
+      <Sider />
       <Layer/>
+      </div>
       <Outlet/>
     </div>
   )

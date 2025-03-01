@@ -1,0 +1,46 @@
+
+.sider_contener{
+     width: 210px;
+     position: relative;
+     height: 100vh;
+     background-color: var(--leamen);
+   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+
+}
+.sider_arrow{
+     position: absolute;
+     top: 5%;
+     left: 90%;
+     transform: translate(-50%,-50%);
+}
+.topContenetr .active{
+     position: relative;
+     left: 0%;
+     transition: all .3s ease-in-out;
+     width: 20%;
+
+
+}
+.topContenetr .inactive{
+     position: relative;
+     left: -180px;
+     transition: all .3s ease-in-out;
+
+}
+.admin_sider_contener{
+  position:absolute;
+  top: 10%;
+  left: 4%;
+ 
+     
+}
+.admin_contener span{
+     font-size: 20px;
+     font-size: 24px;
+     padding: 10px;
+     cursor: pointer;
+     
+}
+.adminMenu_contener:hover {
+     background-color: var(--darkgreentra);
+}

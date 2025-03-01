@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Css/login.css";
-// import { FaArrowRight, FaUserFriends } from "react-icons/fa";
+import { Login_LanguageAmharic,Login_LanguageEnglish,Login_LanguageOromic } from "../../component/config/config";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../app/Store/UserAuth";

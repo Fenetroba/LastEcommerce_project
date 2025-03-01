@@ -1,8 +1,11 @@
 import React from 'react'
-
+import '../PageCss/adminDashBoard.css'
 const DashboardAdmin = () => {
   return (
-    <div>DashboardAdmin
+    <div className='adminDashbord'>
+      <div className="adminDashbord_contener">
+
+      </div>
 
       
     </div>
